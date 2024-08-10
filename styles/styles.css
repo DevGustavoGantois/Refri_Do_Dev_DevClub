@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.item.active {
+    display: block;
+}
+
+.item .title {
+    font-size: 12rem;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+    /* Com esse código consigo centralizar o item ao centro e atrás da imagem. */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.item .fruit {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+
+.item .refri {
+    z-index: 2;
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #eee9;
+    border: 1px solid #eee9;
+    color: #eee;
+    font-size: x-large;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 4;
+    border-radius: 50%;
+}
+
+#prev  {
+    left: 30px;
+}
+
+#next {
+    right: 30px;
+}
+
+@keyframes toActive {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.item.active img.fruit {
+    animation: toActive 0.5s ease-in-out 1;
+}
+
+.item.active .title {
+    animation: toActive 0.5s ease-in-out 1;
+}
+
+@media (max-width: 884px) {
+
+    .item .fruit {
+        width: 100%;
+        margin-top: 12rem;
+    }
+}
+
+@media (max-width: 428px) {
+
+    .item .title {
+        font-size: 5rem;
+    }
+
+    .item .refri {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+}
