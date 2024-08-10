@@ -1,4 +1,4 @@
-< a href="https://refri-do-dev-dev-club.vercel.app/" >Clique aqui para ter acesso ao projeto!<a/>
+< href="https://refri-do-dev-dev-club.vercel.app/">Clique aqui para ter acesso ao projeto!!</a>
 
 <p>Projeto desenvolvido através do vídeo do canal do Rodolfo Mori | Dev Club.</p>
 Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript. Durante sua realização, consolidei meus conhecimentos em CSS, especialmente em animações e pseudo-classes como :active. Além disso, fortaleci minha lógica de programação ao aplicar conceitos avançados de JavaScript.
